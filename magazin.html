@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Купить кроссовки</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+  
+  body { 
+    background: #f8f9fa; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    padding: 20px;
+  }
+
+  /* Сама карточка */
+  .product-card { 
+    background: #fff; 
+    max-width: 900px; 
+    width: 100%;
+    display: flex; 
+    border-radius: 24px; 
+    overflow: hidden; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08); 
+  }
+
+  /* Левая часть с картинкой */
+  .product-img-wrapper { 
+    width: 50%; 
+    background: #f3f4f6; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 40px;
+    position: relative;
+  }
+  
+  /* Место для твоей картинки */
+  .product-img { 
+    width: 100%; 
+    max-width: 400px; 
+    height: auto;
+    border-radius: 15px;
+    object-fit: contain;
+    /* Если картинки нет, будет видно эту серую заглушку */
+    background: #e5e7eb;
+  }
+
+  /* Бейджик "Хит продаж" */
+  .badge {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: #ef4444;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  /* Правая часть с информацией */
+  .product-info { 
+    width: 50%; 
+    padding: 50px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .brand { 
+    color: #ef4444; 
+    font-weight: 800; 
+    letter-spacing: 3px; 
+    text-transform: uppercase; 
+    margin-bottom: 15px; 
+    font-size: 0.9rem;
+  }
+
+  .title { 
+    font-size: 2.5rem; 
+    color: #111827; 
+    margin-bottom: 15px; 
+    line-height: 1.1; 
+    font-weight: 700;
+  }
+
+  /* Звездочки рейтинга */
+  .rating {
+    color: #fbbf24;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .rating span { color: #6b7280; font-size: 0.9rem; }
+
+  .price { 
+    font-size: 2.8rem; 
+    font-weight: 800; 
+    color: #111827; 
+    margin-bottom: 30px; 
+  }
+  .old-price {
+    font-size: 1.5rem;
+    color: #9ca3af;
+    text-decoration: line-through;
+    margin-left: 15px;
+    font-weight: 400;
+  }
+
+  /* Выбор размера */
+  .sizes { margin-bottom: 35px; }
+  .sizes p { margin-bottom: 12px; color: #374151; font-weight: bold; font-size: 0.95rem; }
+  
+  .size-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+  
+  .size-btn { 
+    padding: 12px 20px; 
+    border: 2px solid #e5e7eb; 
+    background: #fff; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    font-weight: bold; 
+    font-size: 1rem;
+    color: #374151;
+    transition: 0.2s; 
+  }
+  .size-btn:hover { border-color: #111827; }
+  .size-btn.active { border-color: #111827; background: #111827; color: #fff; }
+
+  /* Кнопка купить */
+  .buy-btn { 
+    width: 100%; 
+    padding: 20px; 
+    background: #111827; 
+    color: #fff; 
+    border: none; 
+    border-radius: 12px; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: 0.3s; 
+    box-shadow: 0 10px 20px rgba(17, 24, 39, 0.2); 
+  }
+  .buy-btn:hover { 
+    background: #ef4444; 
+    transform: translateY(-3px); 
+    box-shadow: 0 15px 25px rgba(239, 68, 68, 0.3);
+  }
+
+  /* Мобильная версия */
+  @media(max-width: 768px) {
+    .product-card { flex-direction: column; }
+    .product-img-wrapper { width: 100%; padding: 20px; height: 300px; }
+    .product-info { width: 100%; padding: 30px 20px; }
+    .title { font-size: 2rem; }
+    .price { font-size: 2.2rem; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="product-card">
+    
+    <div class="product-img-wrapper">
+      <div class="badge">ХИТ ПРОДАЖ</div>
+      
+      <!-- ВСТАВЬ ССЫЛКУ НА КАРТИНКУ КРОССОВОК ВМЕСТО ТЕКСТА НИЖЕ -->
+      <img src="krosovki.jpg" alt="Кроссовки Nike" class="product-img">
+      
+    </div>
+    
+    <div class="product-info">
+      <div class="brand">Nike</div>
+      <div class="title">Кроссовки Air Max 2026</div>
+      
+      <div class="rating">
+        ★★★★★ <span>(124 отзыва)</span>
+      </div>
+      
+      <div class="price">
+        12 990 ₽ <span class="old-price">15 000 ₽</span>
+      </div>
+      
+      <div class="sizes">
+        <p>Выберите размер (EU):</p>
+        <div class="size-buttons">
+          <button class="size-btn">40</button>
+          <button class="size-btn">41</button>
+          <button class="size-btn active">42</button>
+          <button class="size-btn">43</button>
+          <button class="size-btn">44</button>
+        </div>
+      </div>
+      
+      <button class="buy-btn">Добавить в корзину</button>
+    </div>
+
+  </div>
+
+</body>
+</html>
