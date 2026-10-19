@@ -6,49 +6,280 @@
 <title>Мои работы — Портфолио</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
+
   body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #1e40af 100%);
-    min-height: 100vh; padding: 40px 20px; display: flex; justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
   }
+
   .container {
-    background: #fff; max-width: 800px; width: 100%; border-radius: 24px;
-    padding: 40px; box-shadow: 0 25px 60px rgba(0,0,0,.35);
+    background: #fff;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 25px 60px rgba(0,0,0,.35);
   }
-  header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid #eff6ff; padding-bottom: 25px; }
-  h1 { color: #1e3a8a; font-size: 2.2rem; margin-bottom: 10px; }
-  .subtitle { color: #64748b; font-size: 1.1rem; }
-  
+
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eff6ff;
+    padding-bottom: 25px;
+  }
+
+  h1 {
+    color: #1e3a8a;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+
+  .subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+  }
+
   .btn-outline {
-    display: inline-block; background: transparent; color: #2563eb; border: 2px solid #2563eb;
-    text-decoration: none; padding: 10px 20px; border-radius: 12px; font-weight: 600;
-    font-size: 1rem; transition: all 0.2s; margin-bottom: 20px;
+    display: inline-block;
+    background: transparent;
+    color: #2563eb;
+    border: 2px solid #2563eb;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s;
+    margin-bottom: 20px;
   }
-  .btn-outline:hover { background: #eff6ff; }
 
-  .empty-works { text-align: center; padding: 60px 20px; color: #94a3b8; }
-  .empty-works .icon { font-size: 4rem; margin-bottom: 20px; opacity: 0.5; }
-  .empty-works h2 { justify-content: center; color: #64748b; margin-bottom: 10px; font-size: 1.4rem;}
-  .empty-works p { color: #94a3b8; line-height: 1.6; }
+  .btn-outline:hover {
+    background: #eff6ff;
+  }
 
-  @media (max-width: 600px) { .container { padding: 25px 20px; } h1 { font-size: 1.7rem; } }
+  /* СЕТКА ПРОЕКТОВ */
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .work-card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 18px;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    transition: transform 0.25s, box-shadow 0.25s;
+    min-width: 0;
+  }
+
+  .work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(15, 23, 42, 0.10);
+  }
+
+  .work-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    font-size: 1.9rem;
+    margin-bottom: 18px;
+  }
+
+  .work-card h2 {
+    color: #1e293b;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+
+  .work-card p {
+    color: #64748b;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    flex-grow: 1;
+  }
+
+  .work-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    padding: 13px 12px;
+    border-radius: 11px;
+    font-weight: 700;
+    transition: filter 0.2s, transform 0.2s;
+  }
+
+  .work-button:hover {
+    filter: brightness(0.93);
+    transform: translateY(-2px);
+  }
+
+  .work-button:focus-visible,
+  .btn-outline:focus-visible {
+    outline: 3px solid #94a3b8;
+    outline-offset: 3px;
+  }
+
+  /* 1. КОФЕЙНЯ — кофейные оттенки */
+  .coffee .work-icon {
+    background: #f5e6d3;
+  }
+
+  .coffee {
+    background: linear-gradient(145deg, #fffdf9, #fff7ed);
+    border-color: #ead7c0;
+  }
+
+  .coffee .work-button {
+    background: #70452b;
+    color: #fff;
+  }
+
+  /* 2. IT-ОБУЧЕНИЕ — технологичный синий */
+  .it .work-icon {
+    background: #dbeafe;
+  }
+
+  .it {
+    background: linear-gradient(145deg, #ffffff, #eff6ff);
+    border-color: #bfdbfe;
+  }
+
+  .it .work-button {
+    background: #2563eb;
+    color: #fff;
+  }
+
+  /* 3. ИНТЕРНЕТ-МАГАЗИН — зелёный акцент */
+  .shop .work-icon {
+    background: #d1fae5;
+  }
+
+  .shop {
+    background: linear-gradient(145deg, #ffffff, #ecfdf5);
+    border-color: #a7f3d0;
+  }
+
+  .shop .work-button {
+    background: #047857;
+    color: #fff;
+  }
+
+  /* 4. ФОТОГРАФ — элегантные тёмные оттенки */
+  .photo .work-icon {
+    background: #e9e5ff;
+  }
+
+  .photo {
+    background: linear-gradient(145deg, #ffffff, #f5f3ff);
+    border-color: #ddd6fe;
+  }
+
+  .photo .work-button {
+    background: #37304f;
+    color: #fff;
+  }
+
+  footer {
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eff6ff;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 25px 20px; }
+    h1 { font-size: 1.7rem; }
+    .works-grid { grid-template-columns: 1fr; }
+    .work-card { padding: 22px; }
+  }
 </style>
 </head>
+
 <body>
   <div class="container">
-    <!-- ССЫЛКА НАЗАД НА ГЛАВНУЮ -->
-    <a href="index.html" class="btn-outline">← Назад</a>
-    
+
+    <!-- НАЗАД НА ГЛАВНУЮ -->
+    <a href="index.html" class="btn-outline">← Назад на главную</a>
+
     <header>
       <h1>Мои работы</h1>
-      <div class="subtitle">Портфолио проектов</div>
+      <div class="subtitle">Проекты, идеи и решения</div>
     </header>
 
-    <div class="empty-works">
-      <div class="icon">📂</div>
-      <h2>Скоро здесь появятся проекты</h2>
-      <p>Я как раз работаю над новыми интересными сайтами. Заглядывайте позже!</p>
-    </div>
+    <main class="works-grid">
+
+      <!-- ПРОЕКТ 1: КОФЕЙНЯ -->
+      <article class="work-card coffee">
+        <div class="work-icon" aria-hidden="true">☕</div>
+        <h2>Сайт кофейни</h2>
+        <p>
+          Уютный проект для кофейни с атмосферой ароматного кофе.
+          Дизайн в тёплых оттенках и акцент на гостеприимство.
+        </p>
+        <a href="coffe.html" class="work-button">
+          Заглянуть в кофейню ☕
+        </a>
+      </article>
+
+      <!-- ПРОЕКТ 2: IT-ОБУЧЕНИЕ -->
+      <article class="work-card it">
+        <div class="work-icon" aria-hidden="true">💻</div>
+        <h2>IT-обучение</h2>
+        <p>
+          Сайт-визитка образовательного проекта для тех,
+          кто хочет познакомиться с миром технологий и программирования.
+        </p>
+        <a href="it.html" class="work-button">
+          В мир IT →
+        </a>
+      </article>
+
+      <!-- ПРОЕКТ 3: ИНТЕРНЕТ-МАГАЗИН -->
+      <article class="work-card shop">
+        <div class="work-icon" aria-hidden="true">🛍️</div>
+        <h2>Интернет-магазин</h2>
+        <p>
+          Концепция магазина с карточкой товара.
+          Аккуратная подача информации и удобная структура.
+        </p>
+        <a href="magazin.html" class="work-button">
+          Посмотреть магазин →
+        </a>
+      </article>
+
+      <!-- ПРОЕКТ 4: ФОТОГРАФ -->
+      <article class="work-card photo">
+        <div class="work-icon" aria-hidden="true">📷</div>
+        <h2>Сайт фотографа</h2>
+        <p>
+          Элегантная визитка для фотографа, где главное —
+          визуальный стиль, фотографии и индивидуальность автора.
+        </p>
+        <a href="photograph.html" class="work-button">
+          Смотреть портфолио 📸
+        </a>
+      </article>
+
+    </main>
+
+    <footer>
+      Каждый проект — новый опыт и шаг вперёд.
+    </footer>
+
   </div>
 </body>
 </html>
