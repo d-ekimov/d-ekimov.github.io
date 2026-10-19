@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Портфолио веб-разработчика</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #1e40af 100%);
+    min-height: 100vh; padding: 40px 20px; display: flex; justify-content: center;
+  }
+  .container {
+    background: #fff; max-width: 800px; width: 100%; border-radius: 24px;
+    padding: 40px; box-shadow: 0 25px 60px rgba(0,0,0,.35);
+  }
+  header { text-align: center; margin-bottom: 30px; border-bottom: 2px solid #eff6ff; padding-bottom: 25px; }
+  h1 { color: #1e3a8a; font-size: 2.2rem; margin-bottom: 10px; }
+  .subtitle { color: #64748b; font-size: 1.1rem; }
+  h2 { color: #1e3a8a; margin: 30px 0 15px 0; font-size: 1.4rem; display: flex; align-items: center; gap: 10px; }
+  p { color: #475569; line-height: 1.7; margin-bottom: 15px; font-size: 1.05rem; }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-bottom: 20px; }
+  .skill-card { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 15px; color: #1e3a8a; font-weight: 500; display: flex; align-items: center; gap: 10px; }
+  .services-list { list-style: none; }
+  .services-list li { background: #f8fafc; padding: 15px 20px; border-radius: 10px; margin-bottom: 10px; color: #334155; border-left: 4px solid #2563eb; font-weight: 500; }
+  .btn {
+    display: inline-block; background: #2563eb; color: #fff; text-decoration: none;
+    padding: 15px 30px; border-radius: 12px; font-weight: 600; font-size: 1.1rem;
+    transition: all 0.2s; border: none; cursor: pointer; text-align: center;
+    margin-top: 20px; width: 100%;
+  }
+  .btn:hover { background: #1e40af; transform: translateY(-2px); box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3); }
+  @media (max-width: 600px) { .container { padding: 25px 20px; } h1 { font-size: 1.7rem; } }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Создаю сайты, которые работают</h1>
+      <div class="subtitle">Веб-разработка, вёрстка и программирование под ключ.</div>
+    </header>
+    <section>
+      <h2>👋 Обо мне</h2>
+      <p>Привет! Я — начинающий веб-разработчик. Помогаю бизнесу и частным лицам переносить их идеи в интернет. Пишу чистый, понятный код. Делаю сайты, которые быстро загружаются, красиво выглядят на телефонах и компьютерах, и главное — решают задачи заказчика.</p>
+    </section>
+    <section>
+      <h2>🛠 Что я умею</h2>
+      <div class="skills-grid">
+        <div class="skill-card">🌐 HTML5 / CSS3</div>
+        <div class="skill-card">⚡ JavaScript</div>
+        <div class="skill-card">🎨 UI/UX Дизайн</div>
+        <div class="skill-card">🛒 Сайты-магазины</div>
+        <div class="skill-card">📱 Мобильная вёрстка</div>
+        <div class="skill-card">🛠 Правки и доработки</div>
+      </div>
+    </section>
+    <section>
+      <h2>🚀 Что я делаю</h2>
+      <ul class="services-list">
+        <li>Сайты-визитки и лендинги</li>
+        <li>Портфолио для специалистов</li>
+        <li>Веб-приложения и калькуляторы</li>
+        <li>Адаптация сайтов под телефоны</li>
+      </ul>
+    </section>
+    <!-- ТЕПЕРЬ ЭТО НАСТОЯЩАЯ ССЫЛКА НА ДРУГОЙ ФАЙЛ -->
+    <a href="works.html" class="btn">Посмотреть мои работы →</a>
+  </div>
+</body>
+</html>
