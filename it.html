@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeFuture — IT Курсы</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+  body { background: #0f172a; color: #f8fafc; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: rgba(15, 23, 42, 0.9); border-bottom: 1px solid #1e293b; }
+  .logo { font-size: 1.5rem; font-weight: 800; color: #38bdf8; text-transform: uppercase; letter-spacing: 2px; }
+  nav a { color: #cbd5e1; text-decoration: none; margin-left: 25px; transition: 0.3s; }
+  nav a:hover { color: #38bdf8; }
+  .hero { text-align: center; padding: 120px 20px; background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%); }
+  .hero h1 { font-size: 3.5rem; margin-bottom: 20px; background: -webkit-linear-gradient(45deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .hero p { font-size: 1.2rem; color: #94a3b8; max-width: 600px; margin: 0 auto 40px auto; line-height: 1.6; }
+  .btn { display: inline-block; padding: 15px 40px; background: linear-gradient(90deg, #38bdf8, #818cf8); color: #fff; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; transition: 0.3s; box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3); }
+  .btn:hover { transform: translateY(-3px); box-shadow: 0 15px 25px rgba(56, 189, 248, 0.5); }
+  .courses { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 80px 50px; }
+  .course-card { background: #1e293b; padding: 40px; border-radius: 16px; border: 1px solid #334155; transition: 0.3s; }
+  .course-card:hover { border-color: #38bdf8; transform: translateY(-5px); }
+  .course-card h3 { font-size: 1.5rem; margin-bottom: 15px; color: #f1f5f9; }
+  .course-card p { color: #94a3b8; margin-bottom: 20px; line-height: 1.5; }
+  .price { font-size: 2rem; font-weight: bold; color: #38bdf8; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="logo">CodeFuture</div>
+    <nav><a href="#">Курсы</a><a href="#">Преподаватели</a><a href="#">Войти</a></nav>
+  </header>
+  <section class="hero">
+    <h1>Войди в IT с нуля</h1>
+    <p>Освой востребованную профессию за 6 месяцев. Практика, реальные проекты и помощь с трудоустройством.</p>
+    <a href="#" class="btn">Начать обучение</a>
+  </section>
+  <section class="courses">
+    <div class="course-card">
+      <h3>Frontend Разработчик</h3>
+      <p>HTML, CSS, JavaScript, React. Создавай современные интерфейсы.</p>
+      <div class="price">45 000 ₽</div>
+    </div>
+    <div class="course-card">
+      <h3>Python Разработчик</h3>
+      <p>Бэкенд, базы данных, создание Telegram-ботов и парсинг.</p>
+      <div class="price">50 000 ₽</div>
+    </div>
+  </section>
+</body>
+</html>
