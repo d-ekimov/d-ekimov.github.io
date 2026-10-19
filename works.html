@@ -54,14 +54,14 @@
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.2s;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 
   .btn-outline:hover {
     background: #eff6ff;
   }
 
-  /* СЕТКА ПРОЕКТОВ */
+  /* ОБЩИЕ СТИЛИ КАРТОЧЕК */
   .works-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -95,7 +95,7 @@
     margin-bottom: 18px;
   }
 
-  .work-card h2 {
+  .work-card h3 {
     color: #1e293b;
     font-size: 1.25rem;
     margin-bottom: 10px;
@@ -131,7 +131,41 @@
     outline-offset: 3px;
   }
 
-  /* 1. КОФЕЙНЯ — кофейные оттенки */
+  /* ОТДЕЛЬНАЯ РАМКА ДЛЯ ДЕМОНСТРАЦИОННЫХ РАБОТ */
+  .demo-section {
+    border: 2px solid #dbeafe;
+    border-radius: 20px;
+    padding: 25px;
+    background: linear-gradient(180deg, #f8fbff, #ffffff);
+    margin-bottom: 35px;
+  }
+
+  .section-heading {
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .demo-note {
+    color: #64748b;
+    font-size: 0.92rem;
+    line-height: 1.6;
+    margin-bottom: 22px;
+  }
+
+  .demo-label {
+    display: inline-block;
+    align-self: flex-start;
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 5px 9px;
+    border-radius: 7px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  /* КОФЕЙНЯ */
   .coffee .work-icon {
     background: #f5e6d3;
   }
@@ -146,7 +180,7 @@
     color: #fff;
   }
 
-  /* 2. IT-ОБУЧЕНИЕ — технологичный синий */
+  /* IT-ОБУЧЕНИЕ */
   .it .work-icon {
     background: #dbeafe;
   }
@@ -161,7 +195,7 @@
     color: #fff;
   }
 
-  /* 3. ИНТЕРНЕТ-МАГАЗИН — зелёный акцент */
+  /* ИНТЕРНЕТ-МАГАЗИН */
   .shop .work-icon {
     background: #d1fae5;
   }
@@ -176,7 +210,7 @@
     color: #fff;
   }
 
-  /* 4. ФОТОГРАФ — элегантные тёмные оттенки */
+  /* ФОТОГРАФ */
   .photo .work-icon {
     background: #e9e5ff;
   }
@@ -191,6 +225,44 @@
     color: #fff;
   }
 
+  /* БУДУЩИЕ ПРОЕКТЫ */
+  .future-section {
+    border-top: 2px solid #eff6ff;
+    padding-top: 25px;
+  }
+
+  .future-note {
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .future-placeholder {
+    border: 2px dashed #bfdbfe;
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    color: #64748b;
+  }
+
+  .future-placeholder .placeholder-icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+
+  .future-placeholder h3 {
+    color: #334155;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+  }
+
+  .future-placeholder p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
   footer {
     text-align: center;
     color: #94a3b8;
@@ -201,10 +273,33 @@
   }
 
   @media (max-width: 600px) {
-    .container { padding: 25px 20px; }
-    h1 { font-size: 1.7rem; }
-    .works-grid { grid-template-columns: 1fr; }
-    .work-card { padding: 22px; }
+    body {
+      padding: 20px 12px;
+    }
+
+    .container {
+      padding: 25px 18px;
+    }
+
+    h1 {
+      font-size: 1.7rem;
+    }
+
+    .works-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .work-card {
+      padding: 22px;
+    }
+
+    .demo-section {
+      padding: 18px;
+    }
+
+    .section-heading {
+      font-size: 1.3rem;
+    }
   }
 </style>
 </head>
@@ -212,7 +307,6 @@
 <body>
   <div class="container">
 
-    <!-- НАЗАД НА ГЛАВНУЮ -->
     <a href="index.html" class="btn-outline">← Назад на главную</a>
 
     <header>
@@ -220,61 +314,96 @@
       <div class="subtitle">Проекты, идеи и решения</div>
     </header>
 
-    <main class="works-grid">
+    <!-- ДЕМОНСТРАЦИОННЫЕ ПРОЕКТЫ -->
+    <section class="demo-section">
+      <h2 class="section-heading">🎨 Демонстрационные проекты</h2>
 
-      <!-- ПРОЕКТ 1: КОФЕЙНЯ -->
-      <article class="work-card coffee">
-        <div class="work-icon" aria-hidden="true">☕</div>
-        <h2>Сайт кофейни</h2>
+      <p class="demo-note">
+        Четыре концептуальных сайта, созданных для демонстрации
+        наших навыков дизайна и вёрстки. Функциональность отдельных
+        элементов может быть ограничена. Названия и данные условны;
+        совпадения с реальными людьми и компаниями случайны.
+      </p>
+
+      <div class="works-grid">
+
+        <!-- КОФЕЙНЯ -->
+        <article class="work-card coffee">
+          <div class="work-icon" aria-hidden="true">☕</div>
+          <span class="demo-label">ДЕМО-ПРОЕКТ</span>
+          <h3>Сайт кофейни</h3>
+          <p>
+            Уютный концепт сайта кофейни в тёплых оттенках
+            с акцентом на атмосферу и визуальный стиль.
+          </p>
+          <a href="coffe.html" class="work-button">
+            Заглянуть в кофейню ☕
+          </a>
+        </article>
+
+        <!-- IT-ОБУЧЕНИЕ -->
+        <article class="work-card it">
+          <div class="work-icon" aria-hidden="true">💻</div>
+          <span class="demo-label">ДЕМО-ПРОЕКТ</span>
+          <h3>IT-обучение</h3>
+          <p>
+            Концепт сайта образовательного проекта
+            о технологиях, программировании и обучении.
+          </p>
+          <a href="it.html" class="work-button">
+            В мир IT →
+          </a>
+        </article>
+
+        <!-- ИНТЕРНЕТ-МАГАЗИН -->
+        <article class="work-card shop">
+          <div class="work-icon" aria-hidden="true">🛍️</div>
+          <span class="demo-label">ДЕМО-ПРОЕКТ</span>
+          <h3>Интернет-магазин</h3>
+          <p>
+            Демонстрация оформления карточки товара,
+            подачи информации и структуры магазина.
+          </p>
+          <a href="magazin.html" class="work-button">
+            Посмотреть магазин →
+          </a>
+        </article>
+
+        <!-- ФОТОГРАФ -->
+        <article class="work-card photo">
+          <div class="work-icon" aria-hidden="true">📷</div>
+          <span class="demo-label">ДЕМО-ПРОЕКТ</span>
+          <h3>Сайт фотографа</h3>
+          <p>
+            Концепт персональной страницы фотографа
+            с акцентом на визуальную подачу и портфолио.
+          </p>
+          <a href="photograph.html" class="work-button">
+            Смотреть портфолио 📸
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- БУДУЩИЕ ПРОЕКТЫ -->
+    <section class="future-section">
+      <h2 class="section-heading">🚀 Другие проекты</h2>
+
+      <p class="future-note">
+        Здесь будут появляться новые работы с описанием задач,
+        реализованных возможностей и готовых результатов.
+      </p>
+
+      <div class="future-placeholder">
+        <div class="placeholder-icon" aria-hidden="true">📁</div>
+        <h3>Новые проекты скоро появятся здесь</h3>
         <p>
-          Уютный проект для кофейни с атмосферой ароматного кофе.
-          Дизайн в тёплых оттенках и акцент на гостеприимство.
+          Раздел будет пополняться по мере создания
+          и завершения новых работ.
         </p>
-        <a href="coffe.html" class="work-button">
-          Заглянуть в кофейню ☕
-        </a>
-      </article>
-
-      <!-- ПРОЕКТ 2: IT-ОБУЧЕНИЕ -->
-      <article class="work-card it">
-        <div class="work-icon" aria-hidden="true">💻</div>
-        <h2>IT-обучение</h2>
-        <p>
-          Сайт-визитка образовательного проекта для тех,
-          кто хочет познакомиться с миром технологий и программирования.
-        </p>
-        <a href="it.html" class="work-button">
-          В мир IT →
-        </a>
-      </article>
-
-      <!-- ПРОЕКТ 3: ИНТЕРНЕТ-МАГАЗИН -->
-      <article class="work-card shop">
-        <div class="work-icon" aria-hidden="true">🛍️</div>
-        <h2>Интернет-магазин</h2>
-        <p>
-          Концепция магазина с карточкой товара.
-          Аккуратная подача информации и удобная структура.
-        </p>
-        <a href="magazin.html" class="work-button">
-          Посмотреть магазин →
-        </a>
-      </article>
-
-      <!-- ПРОЕКТ 4: ФОТОГРАФ -->
-      <article class="work-card photo">
-        <div class="work-icon" aria-hidden="true">📷</div>
-        <h2>Сайт фотографа</h2>
-        <p>
-          Элегантная визитка для фотографа, где главное —
-          визуальный стиль, фотографии и индивидуальность автора.
-        </p>
-        <a href="photograph.html" class="work-button">
-          Смотреть портфолио 📸
-        </a>
-      </article>
-
-    </main>
+      </div>
+    </section>
 
     <footer>
       Каждый проект — новый опыт и шаг вперёд.
